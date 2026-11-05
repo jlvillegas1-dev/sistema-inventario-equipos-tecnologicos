@@ -1,0 +1,9 @@
+target/
+.vs/
+.vscode/
+nb-configuration.xml
+*.class
+*.zip
+JdbcProbe.java
+src/main/resources/META-INF/persistence.xml
+inventario_ips_completo.xlsx

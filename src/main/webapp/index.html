@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario | Acceso</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body data-page="login">
+    <main class="login-page">
+        <section class="login-hero">
+            <div class="login-copy">
+                <span class="eyebrow">SENADI</span>
+                <h1>SISTEMA DE INVENTARIO DE LOS EQUIPOS TECNOLÓGICOS</h1>
+                <p>Ingrese sus credenciales institucionales para acceder al sistema</p>
+            </div>
+        </section>
+
+        <section class="login-panel">
+            <div class="login-card">
+                <div class="login-card__header">
+                    <div>
+                        <p class="login-kicker">Acceso al sistema</p>
+                        <h2>Iniciar sesión</h2>
+                    </div>
+                    <div class="live-clock">
+                        <span id="liveDate">--</span>
+                        <strong id="liveClock">--:--:--</strong>
+                    </div>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <label class="field">
+                        <span>Usuario</span>
+                        <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+                    </label>
+                    <label class="field">
+                        <span>Contraseña</span>
+                        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                    </label>
+                    <button type="submit" id="loginSubmit" class="btn-login">Entrar</button>
+                    <div id="loginError" class="login-alert is-hidden"></div>
+                </form>
+
+                <!-- Sección para selección de perfil -->
+                <section id="profileSelection" class="profile-selection is-hidden" aria-live="polite">
+                    <p class="login-kicker">Perfil de acceso</p>
+                    <h3>Seleccione el perfil para continuar</h3>
+                    <div id="profileOptions" class="profile-options"></div>
+                    <button type="button" id="profileBackButton" class="btn-login btn-login--secondary">Volver</button>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/modules/dashboardView.js"></script>
+    <script src="js/modules/actasView.js"></script>
+    <script src="js/modules/inventoryView.js"></script>
+    <script src="js/app.js?v=columnaslic1"></script>
+</body>
+</html>

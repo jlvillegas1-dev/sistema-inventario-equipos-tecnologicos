@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="my_persistence_unit" transaction-type="RESOURCE_LOCAL">
+        <!-- Entidades Base -->
+        <class>com.mycompany.sistemainventariov3.model.Usuario</class>
+        <class>com.mycompany.sistemainventariov3.model.HistoricoCambio</class>
+        <class>com.mycompany.sistemainventariov3.model.Custodio</class>
+        <class>com.mycompany.sistemainventariov3.model.Ubicacion</class>
+        
+        <!-- Entidades de Equipos -->
+        <class>com.mycompany.sistemainventariov3.model.PC</class>
+        <class>com.mycompany.sistemainventariov3.model.Laptop</class>
+        <class>com.mycompany.sistemainventariov3.model.Telefono</class>
+        <class>com.mycompany.sistemainventariov3.model.Escaner</class>
+        <class>com.mycompany.sistemainventariov3.model.Impresora</class>
+        <class>com.mycompany.sistemainventariov3.model.Proyector</class>
+        <class>com.mycompany.sistemainventariov3.model.Infraestructura</class>
+        <class>com.mycompany.sistemainventariov3.model.Licencia</class>
+        <class>com.mycompany.sistemainventariov3.model.Periferico</class>
+        <class>com.mycompany.sistemainventariov3.model.BienControlAdministrativo</class>
+        
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/inventario_dtic_2026?useSSL=false&amp;serverTimezone=America/Lima&amp;allowPublicKeyRetrieval=true" />
+            <property name="javax.persistence.jdbc.user" value="TU_USUARIO" />
+            <property name="javax.persistence.jdbc.password" value="TU_CLAVE" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
+        </properties>
+    </persistence-unit>
+</persistence>
